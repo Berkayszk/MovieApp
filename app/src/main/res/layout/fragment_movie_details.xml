@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/subjectText"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="15dp"
+        android:text="Subject || Burayı belki lineerLayout ile yaparsın ileride düzenle"
+        app:layout_constraintBottom_toTopOf="@+id/languageText"
+        app:layout_constraintEnd_toStartOf="@+id/countryText"
+        app:layout_constraintStart_toStartOf="@+id/countryText"
+        app:layout_constraintTop_toTopOf="@+id/titleText" />
+
+    <TextView
+        android:id="@+id/imdbText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="IMDB"
+        app:layout_constraintStart_toStartOf="@+id/genreText"
+        app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+
+    <TextView
+        android:id="@+id/languageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="219dp"
+        android:text="language"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/subjectText" />
+
+    <TextView
+        android:id="@+id/directorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="director"
+        app:layout_constraintBaseline_toBaselineOf="@+id/genreText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/genreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="29dp"
+        android:text="genre"
+        app:layout_constraintStart_toEndOf="@+id/directorText"
+        app:layout_constraintTop_toBottomOf="@+id/imdbText" />
+
+    <TextView
+        android:id="@+id/actorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Actors"
+        app:layout_constraintStart_toStartOf="@+id/countryText"
+        app:layout_constraintTop_toBottomOf="@+id/countryText" />
+
+    <TextView
+        android:id="@+id/runtimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="Runtime"
+        app:layout_constraintEnd_toEndOf="@+id/yearText"
+        app:layout_constraintStart_toEndOf="@+id/yearText"
+        app:layout_constraintTop_toBottomOf="@+id/yearText" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:text="Title"
+        app:layout_constraintBottom_toTopOf="@+id/languageText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/yearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="56dp"
+        android:text="year"
+        app:layout_constraintEnd_toEndOf="@+id/subjectText"
+        app:layout_constraintStart_toEndOf="@+id/actorText"
+        app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+
+    <TextView
+        android:id="@+id/countryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="15dp"
+        android:text="Country"
+        app:layout_constraintStart_toEndOf="@+id/imdbText"
+        app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+
+    <Button
+        android:id="@+id/favButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="27dp"
+        android:text="Favorite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

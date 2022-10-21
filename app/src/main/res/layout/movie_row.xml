@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/movieRowImageView"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/movieRowNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="22dp"
+            android:textColor="@color/black"
+            android:layout_margin="5dp"
+            android:text="Movie Name "></TextView>
+        <TextView
+            android:id="@+id/movieRowYearText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="22dp"
+            android:layout_margin="5dp"
+
+            android:text="Movie Year "></TextView>
+        <TextView
+            android:id="@+id/movieRowImdbText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="22dp"
+            android:layout_margin="5dp"
+
+            android:text="Movie Imdb "></TextView><TextView
+        android:id="@+id/movieRowGenreText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="22dp"
+        android:layout_margin="5dp"
+        android:text="Movie Genre "></TextView>
+
+    </LinearLayout>
+</LinearLayout>
