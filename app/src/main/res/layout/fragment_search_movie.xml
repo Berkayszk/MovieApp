@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+        android:id="@+id/fab"
+        android:layout_width="69dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:foreground="@drawable/favoriteicon"
+        app:backgroundTint="#73DF02"
+        app:backgroundTintMode="add"
+        app:rippleColor="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="331dp"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <EditText
+        android:id="@+id/searchMoviceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Movice name..."
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="320dp" />
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>
