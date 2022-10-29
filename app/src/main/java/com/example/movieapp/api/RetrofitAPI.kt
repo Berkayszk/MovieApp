@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface RetrofitAPI {
     @GET("?apikey=${API_KEY}")
     suspend fun searchMovie(
-        @Query("s") searchString : String,
-        @Query("t") searchTitle : String
+        @Query("s") searchQuery : String,
+        //@Query("t") searchTitle : String --title repo
     ) : Response<MovieResponse>
 }
