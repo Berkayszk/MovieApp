@@ -37,7 +37,7 @@ class MovieRepository @Inject constructor(
             }
         }
         catch (e:Exception){
-            Resource.error("No Data!",null)
+            Resource.error("No data found!!",null)
         }
     }
 }

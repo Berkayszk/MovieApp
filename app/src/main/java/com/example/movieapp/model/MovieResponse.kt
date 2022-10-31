@@ -24,6 +24,6 @@ data class MovieResponse(
     val boxOffice: String,
     val production: String,
     val website: String,
-    val response: String
+
 
 )
