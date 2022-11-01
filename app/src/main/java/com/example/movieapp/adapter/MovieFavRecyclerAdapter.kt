@@ -5,20 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import com.example.movieapp.R
 import com.example.movieapp.roomdb.Movie
-import org.w3c.dom.Text
 import javax.inject.Inject
 
 //burayı movie api olarak da kullanabilirsin sonda değiştir veya kalsın bind holder kısmı karışık //burası row kısmı
-class MovieFavRecyclerView @Inject constructor(
+class MovieFavRecyclerAdapter @Inject constructor(
     val glide : RequestManager
-) : RecyclerView.Adapter<MovieFavRecyclerView.MovieViewHolder>() {
+) : RecyclerView.Adapter<MovieFavRecyclerAdapter.MovieViewHolder>() {
     class MovieViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView)
 
     private val diffUtil = object : DiffUtil.ItemCallback<Movie>(){

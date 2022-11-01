@@ -21,7 +21,7 @@ class MovieViewModel @Inject constructor(
 ) : ViewModel() {
 
     //Movie Fav Fragment
-    val artList = repository.getMovie()
+    val movieList = repository.getMovie()
 
     //Movie Api Fragment
     private val images = MutableLiveData<Resource<MovieResponse>>()
