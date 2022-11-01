@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "movies")
 data class Movie(
-    //burasi moiveleri göstereceğim kısımın ayarları da olabilir
+    //burasi moiveleri göstereceğim kısımın ayarları da olabilir// burası dataclass değil roomdb için
     var movieName : String,
     var subject : String,
     var director : String,
