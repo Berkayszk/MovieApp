@@ -59,7 +59,7 @@ class ApiFragmentRecyclerAdapter @Inject constructor(
         val url = movieApi[position]
         holder.itemView.apply {
             glide.load(url).into(imageView)
-            setOnItemClickListener {
+            setOnClickListener {
                 onItemClickListener?.let {
                     it(url)
                 }

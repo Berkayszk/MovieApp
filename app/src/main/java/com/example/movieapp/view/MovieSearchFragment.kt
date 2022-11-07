@@ -17,6 +17,9 @@ class MovieSearchFragment : Fragment(R.layout.fragment_search_movie) {
         val binding = FragmentSearchMovieBinding.bind(view)
         fragmentBinding = binding
 
+        binding.searchMovieApiText.setOnClickListener {
+            findNavController().navigate(MovieSearchFragmentDirections.actionMovieSearchFragmentToMovieApiFragment())
+        }
         binding.fab.setOnClickListener {
             findNavController().navigate(MovieSearchFragmentDirections.actionMovieSearchFragmentToMovieFavFragment())
         }

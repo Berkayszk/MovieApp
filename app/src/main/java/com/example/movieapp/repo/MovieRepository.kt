@@ -6,7 +6,6 @@ import com.example.movieapp.model.MovieResponse
 import com.example.movieapp.roomdb.Movie
 import com.example.movieapp.roomdb.MovieDao
 import com.example.movieapp.util.Resource
-import retrofit2.Response
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(
@@ -24,7 +23,6 @@ class MovieRepository @Inject constructor(
     override fun getMovie(): LiveData<List<Movie>> {
         return movieDao.observeMovies()
     }
-
     override suspend fun searchMovie(movieString: String): Resource<MovieResponse> {
         return try {
             val response = retrofitApi.searchMovie(movieString)

@@ -6,38 +6,53 @@
     android:layout_height="match_parent">
 
 
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
 
         android:id="@+id/fab"
         android:layout_width="69dp"
         android:layout_height="64dp"
         android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="17dp"
         android:clickable="true"
         android:foreground="@drawable/favoriteicon"
         app:backgroundTint="#73DF02"
         app:backgroundTintMode="add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/white"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="331dp"
-        tools:layout_editor_absoluteY="523dp" />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/searchMoviceText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="269dp"
         android:ems="10"
         android:hint="Movice name..."
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="270dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:text="Search"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="320dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchMoviceText" />
+
+    <Button
+        android:id="@+id/searchMovieApiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="20dp"
+        android:text="Search For Api"
+        app:layout_constraintEnd_toEndOf="@+id/searchMoviceText"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

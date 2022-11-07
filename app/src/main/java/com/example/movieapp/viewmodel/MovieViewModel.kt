@@ -5,12 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.movieapp.model.MovieResponse
-import com.example.movieapp.repo.MovieRepository
 import com.example.movieapp.repo.MovieRepositoryInterface
 import com.example.movieapp.roomdb.Movie
 import com.example.movieapp.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -24,8 +22,8 @@ class MovieViewModel @Inject constructor(
     val movieList = repository.getMovie()
 
     //Movie Api Fragment
-    private val images = MutableLiveData<Resource<MovieResponse>>()
-    val imageList : LiveData<Resource<MovieResponse>>
+    private val images = MutableLiveData<Resource<com.example.movieapp.model.MovieResponse>>()
+    val imageList : LiveData<Resource<com.example.movieapp.model.MovieResponse>>
     get() = images
 
     private val selectedImage = MutableLiveData<String>()
@@ -38,7 +36,7 @@ class MovieViewModel @Inject constructor(
     val insertMovieMessage : LiveData<Resource<Movie>>
     get() = insertMovieMsg
 
-    fun resetInsertMovieData(){
+    fun resetInsertMovieMsg(){
         insertMovieMsg = MutableLiveData<Resource<Movie>>()
     }
     //Repo

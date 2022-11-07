@@ -11,6 +11,7 @@ import com.example.movieapp.repo.MovieRepositoryInterface
 import com.example.movieapp.roomdb.MovieDao
 import com.example.movieapp.roomdb.MovieDatabase
 import com.example.movieapp.util.Util.BASE_URL
+import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -20,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Singleton
+@Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
