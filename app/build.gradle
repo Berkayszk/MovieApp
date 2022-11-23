@@ -39,6 +39,7 @@ android {
     }
 }
 var kotlin_version = '1.5.31'
+var paging_version = "3.1.1"
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -100,6 +101,25 @@ dependencies {
     androidTestImplementation 'com.google.dagger:hilt-android-testing:2.43.2'
     kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.44'
     debugImplementation "androidx.fragment:fragment-testing:1.6.0-alpha03"
+
+
+
+    implementation("androidx.paging:paging-runtime:$paging_version")
+
+    // alternatively - without Android dependencies for tests
+    testImplementation("androidx.paging:paging-common:$paging_version")
+
+    // optional - RxJava2 support
+    implementation("androidx.paging:paging-rxjava2:$paging_version")
+
+    // optional - RxJava3 support
+    implementation("androidx.paging:paging-rxjava3:$paging_version")
+
+    // optional - Guava ListenableFuture support
+    implementation("androidx.paging:paging-guava:$paging_version")
+
+    // optional - Jetpack Compose integration
+    implementation("androidx.paging:paging-compose:1.0.0-alpha17")
 
     androidTestImplementation("androidx.test.espresso:espresso-contrib:3.4.0") {
         exclude group : "org.checkerframework", module : "checker"

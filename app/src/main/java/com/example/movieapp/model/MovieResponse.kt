@@ -1,6 +1,8 @@
 package com.example.movieapp.model
 
 data class MovieResponse (
-    val hits : List<MovieResult>
-    )
+    val Search : List<MovieResult>,
+    val totalResults : String,
+    val Response: String
+)
 

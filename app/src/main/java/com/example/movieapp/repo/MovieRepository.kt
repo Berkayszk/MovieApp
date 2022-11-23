@@ -6,6 +6,7 @@ import com.example.movieapp.model.MovieResponse
 import com.example.movieapp.roomdb.Movie
 import com.example.movieapp.roomdb.MovieDao
 import com.example.movieapp.util.Resource
+import com.example.movieapp.util.Util.API_KEY
 import javax.inject.Inject
 
 class MovieRepository @Inject constructor(
@@ -25,7 +26,7 @@ class MovieRepository @Inject constructor(
     }
     override suspend fun searchMovie(movieString: String): Resource<MovieResponse> {
         return try {
-            val response = retrofitApi.searchMovie(movieString)
+            val response = retrofitApi.searchMovie("",p = 10, API_KEY)
             if (response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it)

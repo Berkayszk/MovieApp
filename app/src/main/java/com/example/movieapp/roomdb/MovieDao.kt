@@ -7,7 +7,8 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
-@Dao
+//@Dao
+/*
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertMovie(movie: Movie)
@@ -18,3 +19,5 @@ interface MovieDao {
 
 
 }
+
+ */

@@ -8,10 +8,10 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface RetrofitAPI {
-    @GET("?type=movie")
+    @GET("/")
     fun searchMovie(
-        @Query("apikey") apikey: String = API_KEY,
-        @Query("s") searchKey: String,
-        @Query("page") page: String
+        @Query("s") s: String,
+        @Query("page") p: Int,
+        @Query("api") apiKey: String = API_KEY
     ): Response<MovieResponse>
 }
